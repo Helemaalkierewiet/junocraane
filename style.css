@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,125,100..900;1,125,100..900&family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,125,900;1,125,900&family=Bebas+Neue&display=swap');
 * {
-    border: green 1px solid;
+    /*border: green 1px solid;*/
 }
 
 body {
@@ -39,7 +39,7 @@ body section {
 
     position: absolute;
     top: 8rem;
-    left: 10rem;
+    left: 13rem;
 }
 
 .junocraane h2 {
@@ -52,7 +52,7 @@ body section {
 
     position: absolute;
     top: 21rem;
-    left: 8rem;
+    left: 11rem;
 }
 
 .slogan {
@@ -62,16 +62,16 @@ body section {
     font-style: normal;
     font-variation-settings:
             "wdth" 125;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 2.0rem;
+    line-height: 2.9rem;
 
     position: absolute;
 
     color: #fff;
 
 
-    width: 30rem;
-    left: 10rem;
+    width: 49rem;
+    left: 12rem;
     top: 35rem;
 
 
@@ -84,10 +84,71 @@ body section {
 
 .container-showcase img {
     position: absolute;
+    border-radius: 2rem;
+    animation: moveRight 5s ease-in-out infinite forwards;
+
 }
+
+.container-showcase img:hover {
+    animation: scaleUp 0.1s ease-in-out  forwards;
+    /*z-index: 1000;*/
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(0) translateY(0) scale(1);
+    }
+    50% {
+        transform: translateX(2rem) translateY(1rem) scale(1);
+    }
+    100% {
+        transform: translateX(0) translateY(0rem) scale(1);
+    }
+}
+
+@keyframes scaleUp {
+    to {
+        transform: scale(1.5);
+    }
+}
+
+
 
 .container-showcase img:nth-child(1) {
     top: 10rem;
-    left: 0;
+    left: 20rem;
+    object-fit: cover;
+
+    width: 20rem;
+
+    z-index: 10;
+
+    animation-delay: 0s;
+
+}
+
+.container-showcase img:nth-child(2) {
+    top: 20rem;
+    left: 35rem;
+    object-fit: cover;
+
+    width: 17.5rem;
+
+    z-index: 9;
+
+    animation-delay: 1.75s;
+
+}
+
+.container-showcase img:nth-child(5) {
+    top: 35rem;
+    left: 12.5rem;
+    object-fit: cover;
+
+    width: 15rem;
+
+    z-index: 11;
+
+    animation-delay: 0.75s;
 }
 
