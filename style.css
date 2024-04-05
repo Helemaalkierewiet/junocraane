@@ -89,11 +89,18 @@ header article {
     position: absolute;
     border-radius: 2rem;
 
-    animation: moveRight 5s ease-in-out infinite forwards;
+
+}
+
+@keyframes scaleUpOnHover {
+    to {
+        transform: scale(1.5);
+    }
 }
 
 .container-showcase img:hover {
-    animation: scaleUp 0.1s ease-in-out forwards;
+    /* Apply the scaleUpOnHover animation on hover */
+    animation: scaleUpOnHover 0.1s ease-in-out forwards;
 }
 
 @keyframes moveRight {
@@ -108,11 +115,85 @@ header article {
     }
 }
 
-@keyframes scaleUp {
-    to {
-        transform: scale(1.5);
+/*chatGPT keyframes*/
+
+
+@keyframes moveRightCircularUp {
+    0% {
+        transform: translateX(0) translateY(2rem) scale(1);
+    }
+    50% {
+        transform: translateX(-2rem) translateY(1rem) scale(1);
+    }
+    100% {
+        transform: translateX(0) translateY(2rem) scale(1);
     }
 }
+
+@keyframes moveRightCircularDown {
+    0% {
+        transform: translateX(0) translateY(-2rem) scale(1);
+    }
+    50% {
+        transform: translateX(2rem) translateY(-1rem) scale(1);
+    }
+    100% {
+        transform: translateX(0) translateY(-2rem) scale(1);
+    }
+}
+
+@keyframes moveRightCircularLeft {
+    0% {
+        transform: translateX(-2rem) translateY(0) scale(1);
+    }
+    50% {
+        transform: translateX(-1rem) translateY(-2rem) scale(1);
+    }
+    100% {
+        transform: translateX(-2rem) translateY(0) scale(1);
+    }
+}
+
+@keyframes moveRightCircularRight {
+    0% {
+        transform: translateX(2rem) translateY(0) scale(1);
+    }
+    50% {
+        transform: translateX(1rem) translateY(2rem) scale(1);
+    }
+    100% {
+        transform: translateX(2rem) translateY(0) scale(1);
+    }
+}
+
+@keyframes moveRightCircularDiagonalUpRight {
+    0% {
+        transform: translateX(2rem) translateY(2rem) scale(1);
+    }
+    50% {
+        transform: translateX(0) translateY(0) scale(1);
+    }
+    100% {
+        transform: translateX(2rem) translateY(2rem) scale(1);
+    }
+}
+
+
+@keyframes moveRightCircularDiagonalDownLeft {
+    0% {
+        transform: translateX(-2rem) translateY(-2rem) scale(1);
+    }
+    50% {
+        transform: translateX(0) translateY(0) scale(1);
+    }
+    100% {
+        transform: translateX(-2rem) translateY(-2rem) scale(1);
+    }
+}
+
+
+
+
 
 .container-showcase img:nth-child(1) {
     top: 0vw;
@@ -120,16 +201,44 @@ header article {
     object-fit: cover;
     width: 15vw;
     z-index: 10;
-    animation-delay: 0s;
+
+
+    animation: moveRight 5s ease-in-out 0s infinite forwards;
+
 }
 
 .container-showcase img:nth-child(2) {
+    top: 12vw;
+    left: 23vw;
+    object-fit: cover;
+    width: 12.5vw;
+    z-index: 9;
+
+
+    animation: moveRightCircularRight 5s ease-in-out infinite forwards;
+
+}
+.container-showcase img:nth-child(3) {
     top: 12vw;
     left: 25vw;
     object-fit: cover;
     width: 12.5vw;
     z-index: 9;
-    animation-delay: 1.75s;
+
+
+    animation: moveRightCircularLeft 5s ease-in-out infinite forwards;
+
+}
+.container-showcase img:nth-child(4) {
+    top: 12vw;
+    left: 25vw;
+    object-fit: cover;
+    width: 12.5vw;
+    z-index: 9;
+
+
+    animation: moveRightCircularRight 5s ease-in-out infinite forwards;
+
 }
 
 .container-showcase img:nth-child(5) {
@@ -138,7 +247,18 @@ header article {
     object-fit: cover;
     width: 12vw;
     z-index: 11;
-    animation-delay: 0.75s;
+
+    animation: moveRightCircularDiagonalUpRight  5s ease-in-out infinite forwards;
+}
+
+.container-showcase img:nth-child(6) {
+    top: 6vw;
+    left: 6vw;
+    object-fit: cover;
+    width: 15vw;
+    z-index: 7;
+    animation: moveRightCircularLeft   5s ease-in-out infinite forwards;
+
 }
 
 @media screen and (max-width: 768px) {
