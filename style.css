@@ -2,19 +2,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,125,100..900;1,125,100..900&family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,125,900;1,125,900&family=Bebas+Neue&display=swap');
+
 * {
-    border: green 1px solid;
+    /*border: green 1px solid;*/
 }
 
 body {
     background: linear-gradient(to left, #7DD957, #0097B2);
+    font-size: 16px; /* Set base font size */
 }
 
 body section {
     display: flex;
     justify-content: center;
     height: 100vh;
+}
 
+header article {
+    padding: 1.0vw;
+
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 125;
+
+    color: white;
 }
 
 .landing {
@@ -30,29 +42,25 @@ body section {
 }
 
 .junocraane h1 {
-    font-size: 12rem;
+    font-size: 10vw; /* Responsive font size */
     font-weight: bolder;
     color: #fff;
     letter-spacing: 0.5rem;
-
     margin: 0;
-
     position: absolute;
-    top: 8rem;
-    left: 10rem;
+    top: 0vw;
+    left: 7vw;
 }
 
 .junocraane h2 {
-    font-size: 8rem;
+    font-size: 8vw; /* Responsive font size */
     font-weight: bolder;
     color: #FFBD59;
     letter-spacing: 0.5rem;
-
     margin: 0;
-
     position: absolute;
-    top: 21rem;
-    left: 8rem;
+    top: 10.5vw;
+    left: 5.5vw;
 }
 
 .slogan {
@@ -60,34 +68,104 @@ body section {
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
-    font-variation-settings:
-            "wdth" 125;
-    font-size: 1.5rem;
+    font-variation-settings: "wdth" 125;
+    font-size: 1.5vw; /* Responsive font size */
     line-height: 2rem;
-
     position: absolute;
-
     color: #fff;
-
-
-    width: 30rem;
-    left: 10rem;
-    top: 35rem;
-
-
-
+    width: 40vw;
+    left: 6vw;
+    top: 23vw;
 }
 
 .container-showcase {
     position: absolute;
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+    justify-content: center;
 }
 
 .container-showcase img {
     position: absolute;
+    border-radius: 2rem;
+
+    animation: moveRight 5s ease-in-out infinite forwards;
+}
+
+.container-showcase img:hover {
+    animation: scaleUp 0.1s ease-in-out forwards;
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(0) translateY(0) scale(1);
+    }
+    50% {
+        transform: translateX(2rem) translateY(1rem) scale(1);
+    }
+    100% {
+        transform: translateX(0) translateY(0rem) scale(1);
+    }
+}
+
+@keyframes scaleUp {
+    to {
+        transform: scale(1.5);
+    }
 }
 
 .container-showcase img:nth-child(1) {
-    top: 10rem;
-    left: 0;
+    top: 0vw;
+    left: 13vw;
+    object-fit: cover;
+    width: 15vw;
+    z-index: 10;
+    animation-delay: 0s;
 }
 
+.container-showcase img:nth-child(2) {
+    top: 12vw;
+    left: 25vw;
+    object-fit: cover;
+    width: 12.5vw;
+    z-index: 9;
+    animation-delay: 1.75s;
+}
+
+.container-showcase img:nth-child(5) {
+    top: 20vw;
+    left: 8vw;
+    object-fit: cover;
+    width: 12vw;
+    z-index: 11;
+    animation-delay: 0.75s;
+}
+
+@media screen and (max-width: 768px) {
+    /* Apply styles for smaller screens (e.g., tablets) */
+    .junocraane h1 {
+        font-size: 8vw;
+    }
+    .junocraane h2 {
+        font-size: 6vw;
+    }
+    .slogan {
+        font-size: 1.5vw;
+    }
+    .container-showcase img {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Apply styles for smaller screens (e.g., mobile devices) */
+    .junocraane h1 {
+        font-size: 6vw;
+    }
+    .junocraane h2 {
+        font-size: 4vw;
+    }
+    .slogan {
+        font-size: 1.2vw;
+    }
+}
