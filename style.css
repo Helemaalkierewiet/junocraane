@@ -292,26 +292,39 @@ header article {
 
 .carousel-wrap {
     display: flex;
-    width: 100vh /* width of three divs */
-    height: 80vh; /* Set a fixed height */
+    /*width: 100vh !* width of three divs *!*/
+    height: 70vh; /* Set a fixed height */
     overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    background: linear-gradient(to left, #10B175, #7E5DEF);
+
 }
 
 .carousel {
     display: flex;
-
+    height: 80%;
     width: 300vh; /* width of three divs */
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+
 
 }
 
 .carousel div {
     clip-path: polygon(0 0, 66% 0, 100% 100%, 33% 100%);
-    width: 85vh; /* Set a fixed width */
-    height: 75vh; /* Set a fixed height */
+    width: 75vh; /* Set a fixed width */
+    height: 60vh; /* Set a fixed height */
     overflow: hidden; /* Prevent content from expanding the div */
-    margin: -12vh;
+    margin: -10vh;
     color: white;
     text-align: center;
+    transition: all 0.5s ease;
 }
 
 .carousel div img {
@@ -372,4 +385,27 @@ header article {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+#prevBtn, #nextBtn {
+    position: absolute;
+    top: 50%;
+
+
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 20;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
 }
