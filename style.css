@@ -33,7 +33,7 @@ header article {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: 95vh;
     position: absolute;
 }
 
@@ -288,4 +288,88 @@ header article {
     .slogan {
         font-size: 1.2vw;
     }
+}
+
+.carousel-wrap {
+    display: flex;
+    width: 100vh /* width of three divs */
+    height: 80vh; /* Set a fixed height */
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+
+    width: 300vh; /* width of three divs */
+
+}
+
+.carousel div {
+    clip-path: polygon(0 0, 66% 0, 100% 100%, 33% 100%);
+    width: 85vh; /* Set a fixed width */
+    height: 75vh; /* Set a fixed height */
+    overflow: hidden; /* Prevent content from expanding the div */
+    margin: -12vh;
+    color: white;
+    text-align: center;
+}
+
+.carousel div img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel div h3 {
+    font-size: 2rem;
+    margin: 0;
+    color: white;
+
+    position: absolute;
+
+
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings: "wdth" 125;
+
+}
+
+.carousel div:nth-child(1) {
+
+    background: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel div:nth-child(2) {
+
+    background: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel div:nth-child(3) {
+
+    background: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel div:nth-child(4) {
+
+    background: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel div:nth-child(5) {
+
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

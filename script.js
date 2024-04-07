@@ -23,3 +23,6 @@ function resetSizeAndZIndex() {
     this.style.width = this.dataset.originalWidth;
     console.log('reset z-index to 1 and scaled down');
 }
+
+
+
