@@ -10,6 +10,7 @@
 body {
     background: linear-gradient(to left, #7DD957, #0097B2);
     font-size: 16px; /* Set base font size */
+    margin: 0;
 }
 
 body section {

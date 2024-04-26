@@ -13,11 +13,7 @@ window.onload = function() {
 
         // Move the last item to the beginning
         const lastItem = carouselItems[carouselItems.length - 1];
-        lastItem.style.transform = 'translateX(-100%)';
-        setTimeout(function() {
-            carousel.prepend(lastItem);
-            lastItem.style.transform = 'none';
-        }, 500); // Match this with the duration of your CSS transition
+        carousel.prepend(lastItem);
 
         // Update the carouselItems NodeList
         carouselItems = document.querySelectorAll('.carousel div');
@@ -34,11 +30,7 @@ window.onload = function() {
 
         // Move the first item to the end
         const firstItem = carouselItems[0];
-        firstItem.style.transform = 'translateX(100%)';
-        setTimeout(function() {
-            carousel.append(firstItem);
-            firstItem.style.transform = 'none';
-        }, 500); // Match this with the duration of your CSS transition
+        carousel.append(firstItem);
 
         // Update the carouselItems NodeList
         carouselItems = document.querySelectorAll('.carousel div');
@@ -48,6 +40,7 @@ window.onload = function() {
         nextBtn.disabled = false;
     });
 }
+
 function init() {
     const images = document.querySelectorAll('.container-showcase img');
     console.log('DOM loaded');
