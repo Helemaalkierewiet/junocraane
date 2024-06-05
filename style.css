@@ -79,6 +79,65 @@ header article {
     top: 23vw;
 }
 
+/* Showcase ARROWSDOWN*/
+
+
+body .arrows {
+    position: relative;
+   /**/
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 80px;
+   /**/
+    height: 80px;
+    transform: translate(-50%, -50%);
+}
+body .arrows:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-left: 26.6666666667px solid rgba(0, 0, 0, 0.7);
+    border-bottom: 26.6666666667px solid rgba(0, 0, 0, 0.7);
+    transform: translate(26.6666666667px, 106.6666666667px) rotate(-45deg);
+    animation: arrows 3s linear infinite;
+}
+body .arrows:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-left: 26.6666666667px solid rgba(0, 0, 0, 0.7);
+    border-bottom: 26.6666666667px solid rgba(0, 0, 0, 0.7);
+    transform: translate(53.3333333333px, 0px) rotate(-45deg);
+    animation: arrows 3s linear infinite -1.5s;
+}
+@keyframes arrows {
+    0% {
+        border-left: 26.6666666667px solid rgba(0, 0, 0, 0);
+        border-bottom: 26.6666666667px solid rgba(0, 0, 0, 0);
+        transform: translate(-13.3333333333px, -53.3333333333px) rotate(-45deg);
+   }
+    10%, 90% {
+        border-left: 26.6666666667px solid rgba(0, 0, 0, 0);
+        border-bottom: 26.6666666667px solid rgba(0, 0, 0, 0);
+   }
+    50% {
+        border-left: 26.6666666667px solid rgba(0, 0, 0, 0.7);
+        border-bottom: 26.6666666667px solid rgba(0, 0, 0, 0.7);
+        transform: translate(-13.3333333333px, 0px) rotate(-45deg);
+   }
+    100% {
+        border-left: 26.6666666667px solid rgba(0, 0, 0, 0);
+        border-bottom: 26.6666666667px solid rgba(0, 0, 0, 0);
+        transform: translate(-13.3333333333px, 53.3333333333px) rotate(-45deg);
+   }
+}
+
+
+/* Showcase images */
+
 .container-showcase {
     position: absolute;
     display: flex;
@@ -410,3 +469,151 @@ header article {
 #nextBtn {
     right: 10px;
 }
+
+
+/*FORM*/
+
+.form-section * {
+    /* border: yellow solid 1px; */
+    font-size: 2rem;
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    ;
+    
+}
+.form-section  {
+    display: flex;
+    height: 120vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-top: 5vw;
+    justify-content: space-between;
+}
+.form-section h3{
+    margin-bottom: 1vh;
+    font-weight: 900;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 6vw;
+    margin-right: 6vw;
+    margin-top: 6vw; */
+}
+.input-form {
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+}
+.input-form label, .input-form input, .input-form textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 99%;
+}
+.input-form button {
+    width: 101%;
+}
+
+.radio-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+.radio-option {
+    margin: 2vw;
+    margin-top: 1vw;
+    margin-left: 0;
+}
+ 
+/* Hide the default radio button */
+input[type="radio"] {
+    display: none;
+}
+
+/* Create a new custom radio button */
+input[type="radio"] + label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+}
+
+input[type="radio"] + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 2px solid #000;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/* Style for when the radio button is checked */
+input[type="radio"]:checked + label:before {
+    background-color: #000;
+}
+
+.radio-option {
+    color: white;
+    font-weight: 1000;
+}
+
+.input-form textarea {
+    resize: none;
+    font-size: 0.9rem;
+    width: 99%;
+    height: 20vh;
+}
+
+.signature {
+    font-size: 1.6rem;
+}
+
+.signature h2 {
+    font-size: 8vw; /* Responsive font size */
+    font-weight: bolder;
+    color: #fff;
+    letter-spacing: 0.5rem;
+    margin: 0;
+    
+    
+}
+
+.signature h3 {
+    font-size: 6vw; /* Responsive font size */
+    font-weight: bolder;
+    color: #FFBD59;
+    letter-spacing: 0.5rem;
+    margin-top: -5vh;
+    /* position: absolute; */
+    top: 0vw;
+    left: 7vw;
+}
+.p1 {
+    font-size: 2.5rem;
+    margin-top: 13vh;
+   
+}
+
+.p2 {
+    font-size: 1.1rem;
+    font-weight: 1000;
+    
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 6vw;
+}
+
+.social-links li {
+    display: inline;
+    /* margin-bottom: 0; Adjust as needed */
+}
+
+.social-links li a img {
+    width: 5vw; /* Adjust as needed */
+     /* Adjust as needed */
+}
+ 
